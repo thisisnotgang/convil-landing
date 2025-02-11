@@ -15,17 +15,17 @@ async function loadHTML(elementId, path) {
             console.log('YouTube 섹션 로드됨'); // 디버깅용
             
             // CSS 로드
-            if (!document.querySelector('link[href="/section/css/main-youtube-section.css"]')) {
+            if (!document.querySelector('link[href="./section/css/main-youtube-section.css"]')) {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
                 link.type = 'text/css';
-                link.href = '/section/css/main-youtube-section.css';
+                link.href = './section/css/main-youtube-section.css';
                 document.head.appendChild(link);
             }
 
             // 스크립트 로드 및 실행
             const script = document.createElement('script');
-            script.src = '/section/js/main-youtube-section.js';
+            script.src = './section/js/main-youtube-section.js';
             script.onload = function() {
                 console.log('YouTube 스크립트 로드됨'); // 디버깅용
                 if (typeof loadVideos === 'function') {
