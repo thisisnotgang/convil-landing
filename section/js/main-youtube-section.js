@@ -47,8 +47,19 @@ function createVideoElement(video) {
     
     return videoDiv;
 }
+
 async function loadVideos() {
+    console.log('loadVideos 함수 실행됨'); // 디버깅용
+    
     const videosContainer = document.getElementById('videos');
+    if (!videosContainer) {
+        console.error('videos 컨테이너를 찾을 수 없습니다');
+        return;
+    }
+    
+    // 컨테이너를 비워서 중복 로드 방지
+    videosContainer.innerHTML = '';
+    
     let pageToken = '';
     
     while (true) {
@@ -66,4 +77,10 @@ async function loadVideos() {
     }
 }
 
-loadVideos();
+// DOMContentLoaded 이벤트 리스너 제거 (import.js에서 처리)
+// window.onload 이벤트로 변경
+window.onload = function() {
+    if (document.getElementById('videos')) {
+        loadVideos();
+    }
+};
