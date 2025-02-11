@@ -6,9 +6,9 @@
     right: 0;
     width: 100%;
     height: 100px;
-    background: #111;
+    background: transparent;
 }
 
 #headerInner {
-    color: #fff;;
+    color: #000;;
 }

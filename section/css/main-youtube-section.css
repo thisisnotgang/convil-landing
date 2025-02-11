@@ -1,0 +1,9 @@
+#mainYoutubeSectionInner .youtube-section-frame ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#mainYoutubeSectionInner .youtube-section-frame ul li iframe {
+    width: 100%;
+}

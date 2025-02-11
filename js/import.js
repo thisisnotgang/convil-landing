@@ -20,6 +20,8 @@ async function initLayout() {
     await loadHTML('layout', './basic/layout.html');
     await loadHTML('header', './basic/header.html');
     await loadHTML('footer', './basic/footer.html');
+    await loadHTML('mainDashboardSection', './section/main/main-dashboard-section.html');
+    await loadHTML('mainYoutubeSection', './section/main/main-youtube-section.html');
 
     // header 높이만큼 container에 margin-top 설정
     const header = document.getElementById('header');
