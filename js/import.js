@@ -39,7 +39,6 @@ async function loadHTML(elementId, path) {
     }
 }
 
-
 // 순차적 로드
 async function initLayout() {
     // 먼저 layout 로드
